@@ -59,7 +59,7 @@ a{color:inherit;text-decoration:none}
 .price{font-size:26px;font-weight:700;letter-spacing:-.04em}
 .price small{color:#cbd6e1;font-size:13px;font-weight:500;letter-spacing:0}
 .availability{display:block;padding:11px 10px;border:1px solid rgba(var(--rank-rgb),.42);border-radius:10px;background:rgba(var(--rank-rgb),.13);color:var(--rank);font-size:12px;font-weight:700;letter-spacing:.06em;text-align:center;text-transform:uppercase}
-.store-note{max-width:860px;margin:26px auto 0;color:#c4ced9;font-size:13px;line-height:1.6;text-align:center}
+.store-note{max-width:860px;margin:26px auto 0;padding:17px 23px;border:1px solid rgba(255,255,255,.23);border-radius:15px;background:linear-gradient(140deg,rgba(255,255,255,.13),rgba(13,22,35,.5));box-shadow:0 12px 34px rgba(0,0,0,.18),inset 0 1px rgba(255,255,255,.12);backdrop-filter:blur(18px);color:#e4eaf1;font-size:13px;line-height:1.6;text-align:center}
 
 @media(max-width:1000px){.rank-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.store{width:min(740px,calc(100% - 40px))}.store-heading{margin-bottom:35px}}
 @media(max-width:600px){.home{padding:28px 19px 84px}.home-logo{width:min(95vw,460px);max-height:48vh;transform:translateY(-14px)}.home-actions{gap:22px;margin-top:12px}.home-action{width:120px;font-size:18px}.home-action img{width:94px;height:94px}.home-footer{right:18px;bottom:16px;left:18px;font-size:11px}.home-footer nav{gap:13px}.store{width:calc(100% - 32px);padding:18px 0 50px}.store-heading{margin:8px auto 27px}.rank-grid{grid-template-columns:1fr;gap:13px}.rank-card{min-height:330px}}
