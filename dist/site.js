@@ -1,29 +1,32 @@
-const themeButton = document.getElementById("theme-toggle");
-const savedTheme = localStorage.getItem("bloxbob-theme");
-const initialTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
-function setTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-  if (themeButton) {
-    themeButton.textContent = theme === "light" ? "Dark mode" : "Light mode";
-    themeButton.setAttribute("aria-label", "Switch to " + (theme === "light" ? "dark" : "light") + " mode");
-  }
-}
-setTheme(initialTheme);
-themeButton?.addEventListener("click", () => {
-  const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
-  setTheme(next);
-  localStorage.setItem("bloxbob-theme", next);
-});
-document.querySelectorAll("[data-copy]").forEach(button => {
-  button.addEventListener("click", async () => {
-    const original = button.textContent;
-    const value = button.getAttribute("data-copy");
+const joinButton = document.querySelector('[data-copy-ip]');
+const toast = document.querySelector('[data-toast]');
+
+if (joinButton) {
+  joinButton.addEventListener('click', async () => {
+    const ip = joinButton.dataset.copyIp;
     try {
-      await navigator.clipboard.writeText(value);
-      button.textContent = "Copied";
-      setTimeout(() => { button.textContent = original; }, 1700);
+      await navigator.clipboard.writeText(ip);
     } catch {
-      button.textContent = value;
+      const fallback = document.createElement('textarea');
+      fallback.value = ip;
+      fallback.style.position = 'fixed';
+      fallback.style.opacity = '0';
+      document.body.appendChild(fallback);
+      fallback.select();
+      const copied = document.execCommand('copy');
+      fallback.remove();
+      if (!copied) {
+        toast.textContent = `Copy this server IP: ${ip}`;
+        toast.classList.add('visible');
+        return;
+      }
     }
+    toast.textContent = `${ip} copied`;
+    toast.classList.add('visible');
+    joinButton.querySelector('[data-copy-label]').textContent = 'Copied!';
+    window.setTimeout(() => {
+      toast.classList.remove('visible');
+      joinButton.querySelector('[data-copy-label]').textContent = 'Join';
+    }, 2400);
   });
-});
+}

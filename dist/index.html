@@ -1,28 +1,29 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0d1530">
-  <meta name="description" content="BloxBob SMP — join at bloxbob.net, explore relics and view ranks.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101723">
   <title>BloxBob SMP</title>
-  <link rel="stylesheet" href="site.css"><script src="site.js" defer></script>
+  <meta name="description" content="BloxBob SMP — store and server address.">
+  <link rel="preload" href="assets/bloxbob-logo.png" as="image">
+  <link rel="stylesheet" href="site.css">
+  <script src="site.js" defer></script>
 </head>
-<body>
-  <main class="board">
-    <header class="head">
-      <span class="small-link">BLOXBOB SMP</span>
-      <a class="brand" href="./" aria-label="BloxBob SMP home"><img src="assets/bloxbob-logo.png" alt="BloxBob SMP"></a>
-      <button class="theme" type="button" id="theme-toggle">Light mode</button>
-    </header>
-    <div class="tile-grid">
-      <a class="tile tile-ranks" href="ranks.html">
-        <div><span class="tile-label">Store</span><h2>Ranks</h2><p>Bronze · Gold · Platinum · Crown</p><div class="rank-icons" aria-hidden="true"><img src="assets/bronze.png" alt=""><img src="assets/gold.png" alt=""><img src="assets/platinum.png" alt=""><img src="assets/crown.png" alt=""></div></div><span class="tile-arrow" aria-hidden="true">↗</span>
+<body class="home-page">
+  <main class="home" aria-label="BloxBob SMP">
+    <img class="home-logo" src="assets/bloxbob-logo.png" alt="BloxBob SMP">
+    <div class="home-actions">
+      <a class="home-button store-button" href="ranks.html">
+        <img src="assets/store-chest.png" alt="" width="40" height="40">
+        <span>Store</span>
       </a>
-      <a class="tile tile-relics" href="relics.html"><div><span class="tile-label">In game</span><h2>Relics</h2><p>Equip, choose abilities, level up.</p></div><span class="tile-arrow" aria-hidden="true">↗</span></a>
-      <div class="tile tile-join"><div><span class="tile-label">Join</span><h2>Play with us</h2><p>Minecraft Java Edition<br>Server address below.</p></div></div>
+      <button class="home-button join-button" type="button" data-copy-ip="bloxbob.net" aria-label="Join BloxBob SMP: copy bloxbob.net">
+        <span class="join-symbol" aria-hidden="true">✦</span>
+        <span data-copy-label>Join</span>
+      </button>
     </div>
-    <div class="server-bar"><span>SERVER IP</span><code>bloxbob.net</code><button class="copy" type="button" data-copy="bloxbob.net">Copy IP</button></div>
-    <footer class="foot"><span>© BloxBob SMP</span><span>Java Edition</span></footer>
   </main>
+  <div class="copy-toast" role="status" aria-live="polite" data-toast></div>
 </body>
 </html>
