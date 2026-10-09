@@ -5,45 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101723">
   <title>Store · BloxBob SMP</title>
-  <meta name="description" content="Browse BloxBob SMP ranks: Bronze, Gold, Platinum and Crown.">
-  <link rel="stylesheet" href="site.css">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="description" content="BloxBob SMP store: ranks (Bronze, Gold, Platinum, Crown) and skin crate keys.">
+  <link rel="stylesheet" href="site.css?v=store-tabs-1">
 </head>
 <body class="ranks-page">
   <main class="store">
     <a class="back-link" href="./" aria-label="Back to home"><span class="back-icon" aria-hidden="true">←</span><span>Back to home</span></a>
     <div class="store-heading">
       <img class="store-logo" src="assets/bloxbob-logo.png" alt="BloxBob SMP">
-      <h1>Store</h1>
-      <span class="heading-rule" aria-hidden="true"></span>
-      <h2>Ranks</h2>
+      <h1>STORE</h1>
+      <nav class="store-tabs" aria-label="Store categories"><a href="#ranks" data-tab="ranks" class="active">Ranks</a><a href="#keys" data-tab="keys">Keys</a></nav>
     </div>
+    <section id="ranks" data-panel="ranks">
     <div class="rank-grid">
       <article class="rank-card bronze">
-        <div class="rank-top"><img src="assets/bronze-hd.png" alt="" width="72" height="72"></div>
+        <div class="rank-top"><img src="assets/bronze-pixel.png" alt="" width="72" height="72"></div>
         <h3>Bronze</h3>
-        <ul><li><b>3</b> homes</li><li>Bronze chat, TAB &amp; Discord role</li><li>Copper &amp; ivory chat accents</li><li>Supporter social events</li><li>2 video casting entries</li></ul>
-        <div class="rank-bottom"><span class="price">$2.99 <small>/ month</small></span><span class="availability">Coming soon</span></div>
+        <ul><li><b>3</b> homes</li><li>Bronze queue priority</li><li><b>15</b> follow slots</li><li>Kill effect: Spark burst</li><li><b>10s</b> /rtp cooldown</li><li>Bronze chat, TAB &amp; Discord role</li><li>Copper &amp; ivory chat accents</li><li>Supporter social events</li><li>2 video casting entries</li></ul>
+        <div class="rank-bottom"><span class="price">$2.99 <small>/ month</small></span><button type="button" class="availability buy" data-package="bronze" disabled>Coming soon</button></div>
       </article>
       <article class="rank-card gold">
-        <div class="rank-top"><img src="assets/gold-hd-v2.png" alt="" width="72" height="72"></div>
+        <div class="rank-top"><img src="assets/gold-pixel.png" alt="" width="72" height="72"></div>
         <h3>Gold</h3>
-        <ul><li><b>5</b> homes</li><li>Gold chat, TAB &amp; Discord role</li><li>Gold &amp; aqua chat accents</li><li>Colored join &amp; leave message</li><li>Supporter social events</li><li>3 video casting entries</li></ul>
-        <div class="rank-bottom"><span class="price">$5.99 <small>/ month</small></span><span class="availability">Coming soon</span></div>
+        <ul><li><b>5</b> homes</li><li>Gold queue priority</li><li><b>30</b> follow slots</li><li>Kill effects: Spark burst, Flame swirl</li><li>No /rtp cooldown</li><li><b>3s</b> teleport warmup</li><li>Gold chat, TAB &amp; Discord role</li><li>Gold &amp; aqua chat accents</li><li>Colored join &amp; leave message</li><li>Supporter social events</li><li>3 video casting entries</li></ul>
+        <div class="rank-bottom"><span class="price">$5.99 <small>/ month</small></span><button type="button" class="availability buy" data-package="gold" disabled>Coming soon</button></div>
       </article>
       <article class="rank-card platinum">
-        <div class="rank-top"><img src="assets/platinum-hd-v2.png" alt="" width="72" height="72"></div>
+        <div class="rank-top"><img src="assets/platinum-pixel.png" alt="" width="72" height="72"></div>
         <h3>Platinum</h3>
-        <ul><li><b>8</b> homes</li><li>Platinum chat, TAB &amp; Discord role</li><li>Frost &amp; lilac chat accents</li><li>Colored join &amp; leave message</li><li>Supporter social events</li><li>4 video casting entries</li></ul>
-        <div class="rank-bottom"><span class="price">$9.99 <small>/ month</small></span><span class="availability">Coming soon</span></div>
+        <ul><li><b>8</b> homes</li><li>Platinum queue priority</li><li><b>50</b> follow slots</li><li>Kill effects: + Frost shatter, Soul flames</li><li>No /rtp cooldown</li><li><b>2s</b> teleport warmup</li><li>Friend alerts with sound</li><li>Platinum chat, TAB &amp; Discord role</li><li>Frost &amp; lilac chat accents</li><li>Colored join &amp; leave message</li><li>Supporter social events</li><li>4 video casting entries</li></ul>
+        <div class="rank-bottom"><span class="price">$9.99 <small>/ month</small></span><button type="button" class="availability buy" data-package="platinum" disabled>Coming soon</button></div>
       </article>
       <article class="rank-card crown">
-        <div class="rank-top"><img src="assets/crown-hd-v2.png" alt="" width="72" height="72"></div>
+        <div class="rank-top"><img src="assets/crown-pixel.png" alt="" width="72" height="72"></div>
         <h3>Crown</h3>
-        <ul><li><b>12</b> homes</li><li>Crown chat, TAB &amp; Discord role</li><li>Ruby &amp; mint chat accents</li><li>Colored join &amp; leave message</li><li>Supporter social events</li><li>5 video casting entries</li><li>End-of-stream shout-out</li></ul>
-        <div class="rank-bottom"><span class="price">$14.99 <small>/ month</small></span><span class="availability">Coming soon</span></div>
+        <ul><li><b>12</b> homes</li><li>Top queue priority &amp; join when full</li><li><b>Unlimited</b> follow slots</li><li>All kill effects + Lightning &amp; Crown fireworks</li><li>Custom kill message</li><li>No /rtp cooldown</li><li><b>2s</b> teleport warmup</li><li>Style your name with colors &amp; gradients</li><li>Styled name above head &amp; in TAB</li><li>Crown chat, TAB &amp; Discord role</li><li>Ruby &amp; mint chat accents</li><li>Colored join &amp; leave message</li><li>Supporter social events</li><li>5 video casting entries</li><li>End-of-stream shout-out</li></ul>
+        <div class="rank-bottom"><span class="price">$14.99 <small>/ month</small></span><button type="button" class="availability buy" data-package="crown" disabled>Coming soon</button></div>
       </article>
     </div>
-    <p class="store-note">Video casting is opt-in through /settings; selection is a draw among online players and a role is never guaranteed. Community giveaways are open to everyone.</p>
+    </section>
+    <section id="keys" data-panel="keys">
+    <p class="store-section">Skin crate keys: open them at the crates at spawn for cosmetic armor and sword skins. Duplicates give key shards, and 2 shards craft a new key.</p>
+    <div class="rank-grid key-grid">
+      <article class="rank-card key-card armory">
+        <div class="rank-top"><img src="assets/key-armory.png" alt="" width="96" height="96"></div>
+        <h3>1× Armory Skin Key</h3>
+        <ul><li>Cosmetic 3D armor skins for Titan &amp; Skyward</li><li>Changes the look only, stats stay the same</li><li>Iron Plate to Exalted Aurum</li><li>Open at the skin crates at spawn</li></ul>
+        <div class="rank-bottom"><span class="price">$1.99</span><button type="button" class="availability buy" data-package="armory_1" disabled>Coming soon</button></div>
+      </article>
+      <article class="rank-card key-card armory">
+        <div class="rank-top"><img src="assets/key-armory-5.png" alt="" width="96" height="96"></div>
+        <h3>5× Armory Skin Keys</h3>
+        <ul><li>Cosmetic 3D armor skins for Titan &amp; Skyward</li><li>Changes the look only, stats stay the same</li><li>Iron Plate to Exalted Aurum</li><li>Open at the skin crates at spawn</li><li><b>Save 20%</b></li></ul>
+        <div class="rank-bottom"><span class="price">$7.99</span><button type="button" class="availability buy" data-package="armory_5" disabled>Coming soon</button></div>
+      </article>
+      <article class="rank-card key-card arsenal">
+        <div class="rank-top"><img src="assets/key-arsenal.png" alt="" width="96" height="96"></div>
+        <h3>1× Arsenal Skin Key</h3>
+        <ul><li>Cosmetic sword skins for Stormcaller, Bloodfang &amp; Frostbite</li><li>Changes the look only, stats stay the same</li><li>119 blades to roll</li><li>Open at the skin crates at spawn</li></ul>
+        <div class="rank-bottom"><span class="price">$1.99</span><button type="button" class="availability buy" data-package="arsenal_1" disabled>Coming soon</button></div>
+      </article>
+      <article class="rank-card key-card arsenal">
+        <div class="rank-top"><img src="assets/key-arsenal-5.png" alt="" width="96" height="96"></div>
+        <h3>5× Arsenal Skin Keys</h3>
+        <ul><li>Cosmetic sword skins for Stormcaller, Bloodfang &amp; Frostbite</li><li>Changes the look only, stats stay the same</li><li>119 blades to roll</li><li>Open at the skin crates at spawn</li><li><b>Save 20%</b></li></ul>
+        <div class="rank-bottom"><span class="price">$7.99</span><button type="button" class="availability buy" data-package="arsenal_5" disabled>Coming soon</button></div>
+      </article>
+    </div>
+    </section>
+    <p class="store-note">Video casting is opt-in through /settings; selection is a draw among online players and a role is never guaranteed. Community giveaways are open to everyone. Name styling changes only how your name looks, never the name itself. All perks and skins are cosmetic or convenience; none affect combat. Keys are added to your account instantly and work on every server.</p>
   </main>
+  <script src="https://js.tebex.io/v/1.js" defer></script>
+  <script src="store.js?v=2" defer></script>
 </body>
 </html>
